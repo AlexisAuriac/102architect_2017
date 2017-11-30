@@ -15,9 +15,9 @@ LIB	=	-lm -L./lib/my -lmy
 
 NAME	=	102architect
 
-all	:	lib	$(NAME)
+all	:	$(NAME)
 
-$(NAME)	:	$(OBJ)
+$(NAME)	:	$(OBJ)	lib
 		gcc -o $(NAME) $(OBJ) $(LIB)
 
 lib	:	lib/my/Makefile

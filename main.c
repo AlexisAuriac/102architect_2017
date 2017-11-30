@@ -35,7 +35,6 @@ void get_transf(vector_t pos, double matx[3][3], char **av)
 		case 's' :
 			symmetry(matx, atof(av[i + 1]));
 			i += 2;
-			break;
 		}
 	}
 }

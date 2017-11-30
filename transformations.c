@@ -33,6 +33,8 @@ void translation(double matx[3][3], double vector_x, double vector_y)
 	matx_trans[0][2] = vector_x;
 	matx_trans[1][2] = vector_y;
 	multiplie_matx(matx, matx_trans);
+	vector_x = ABS_ZERO(vector_x);
+	vector_y = ABS_ZERO(vector_y);
 	printf("Translation by the vector (%.f, %.f)\n", vector_x, vector_y);
 }
 
@@ -43,6 +45,8 @@ void homothety(double matx[3][3], double vector_x, double vector_y)
 	matx_homo[0][0] = vector_x;
 	matx_homo[1][1] = vector_y;
 	multiplie_matx(matx, matx_homo);
+	vector_x = ABS_ZERO(vector_x);
+	vector_y = ABS_ZERO(vector_y);
 	printf("Homothety by the ratios %.f and %.f\n", vector_x, vector_y);
 }
 
@@ -56,6 +60,7 @@ void rotation(double matx[3][3], double angle)
 	matx_rot[1][0] = sin(angle);
 	matx_rot[1][1] = cos(angle);
 	multiplie_matx(matx, matx_rot);
+	angle = ABS_ZERO(angle);
 	printf("Rotation at a %.f degree angle\n", DEGREE(angle));
 }
 
@@ -69,5 +74,6 @@ void symmetry(double matx[3][3], double angle)
 	matx_sym[1][0] = sin(2 * angle);
 	matx_sym[1][1] = -cos(2 * angle);
 	multiplie_matx(matx, matx_sym);
+	angle =	ABS_ZERO(angle);
 	printf("Symmetry about an axis inclined with an angle of %.f degrees\n", DEGREE(angle));
 }

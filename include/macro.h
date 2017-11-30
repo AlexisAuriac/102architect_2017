@@ -9,6 +9,7 @@
 #define MACROS_H
 
 #define ABS(value)   (((value) >= 0) ? (value) : (-value))
+#define ABS_ZERO(value) ((value > -0.000000000000001) ? (ABS(value)) : (value))
 #define	RAD(value) (value * M_PI /180)
 #define DEGREE(value) (value / M_PI * 180)
 
