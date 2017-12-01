@@ -5,10 +5,9 @@
 ** Puts the number given as a paremeter in a string.
 */
 
-#include <stdlib.h>
 #include "my.h"
 
-int get_nb_size(int n)
+static int get_nb_size(int n)
 {
 	int chiffres = 0;
 
@@ -32,7 +31,7 @@ int my_getstr(int n)
 		minus = 'T';
 		n = -n;
 	}
-	for (i ; n != 0 ; i++) {
+	for (i = 0 ; n != 0 ; i++) {
 		result[i] = n % 10 + '0';
 		n = n / 10;
 	}

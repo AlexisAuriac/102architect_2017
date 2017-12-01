@@ -15,7 +15,7 @@ void display_image(vector_t pos1, vector_t pos2)
 	pos1.y = ABS_ZERO(pos1.y);
 	pos2.x = ABS_ZERO(pos2.x);
 	pos2.y = ABS_ZERO(pos2.y);
-	printf("(%.f,%.f) => (%.2f,%.2f)\n",  pos1.x, pos1.y, pos2.x, pos2.y);
+	printf("(%.f,%.f) => (%.2f,%.2f)\n", pos1.x, pos1.y, pos2.x, pos2.y);
 }
 
 void display_matrix(double matrix[3][3])

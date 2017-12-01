@@ -2,7 +2,7 @@
 ## EPITECH PROJECT, 2017
 ## Makefile libmy.a
 ## File description:
-## 
+## Makefile for libmy.a.
 ##
 
 SRC	=	$(wildcard *.c)
@@ -15,6 +15,8 @@ all	:	$(LIB)
 
 $(LIB)	:	$(OBJ)
 		ar rc $(LIB) $(OBJ)
+		cp $(LIB) ../graph
+		cp my.h ../../include/
 
 clean	:
 		rm -f $(OBJ) *~ *#*

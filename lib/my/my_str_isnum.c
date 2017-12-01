@@ -8,19 +8,20 @@
 
 #include "my.h"
 
-int my_rec_str_isnum(char const *str, int i)
+static int my_rec_str_isnum(char const *str, int i)
 {
 	if (str[i] == '\0')
 		return (1);
-	if (str[i] < '0' || str[i] > '9')
+	if ((str[i] < '0' || str[i] > '9') && str[i] != '-')
 		return (0);
-	my_rec_str_isnum(str, i + 1);
+	return (my_rec_str_isnum(str, i + 1));
 }
 
 int my_str_isnum(char const *str)
 {
-	int result;
+	int result = 0;
 
-	result = my_rec_str_isnum(str, 0);
+	if (str != NULL)
+		result = my_rec_str_isnum(str, 0);
 	return (result);
 }

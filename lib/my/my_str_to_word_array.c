@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include "my.h"
 
-int is_endword(char const *str, int n)
+static int is_endword(char const *str, int n)
 {
 	if (my_isalpha(str[n]) == 1 && my_isalpha(str[n + 1]) == 0)
 		return (1);
@@ -19,7 +19,7 @@ int is_endword(char const *str, int n)
 		return (0);
 }
 
-int count_words(char const *str)
+static int count_words(char const *str)
 {
 	int count = 0;
 	char *dest = my_strdup(str);
@@ -33,7 +33,7 @@ int count_words(char const *str)
 	return (count);
 }
 
-int sizeof_word(char const *str, int start)
+static int sizeof_word(char const *str, int start)
 {
 	int w_len = 1;
 
@@ -43,7 +43,7 @@ int sizeof_word(char const *str, int start)
 	return (w_len);
 }
 
-char *strcpy_part(char *dest, char *src, int start, int n)
+static char *strcpy_part(char *dest, char *src, int start, int n)
 {
 	int i;
 

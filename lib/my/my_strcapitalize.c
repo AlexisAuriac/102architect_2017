@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-char *my_rec(char *str, char capitalize, int i)
+static char *my_rec_capitalize(char *str, char capitalize, int i)
 {
 	if (str[i] == '\0')
 		return (str);
@@ -21,12 +21,12 @@ char *my_rec(char *str, char capitalize, int i)
 		if (str[i] < '0' || str[i] > '9')
 			capitalize = 'T';
 	}
-	my_rec(str, capitalize, i + 1);
+	return (my_rec_capitalize(str, capitalize, i + 1));
 }
 
 char *my_strcapitalize(char *str)
 {
 	my_strlowcase(str);
-	my_rec(str, 'T', 0);
+	my_rec_capitalize(str, 'T', 0);
 	return (str);
 }

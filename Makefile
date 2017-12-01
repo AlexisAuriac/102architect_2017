@@ -2,12 +2,13 @@
 ## EPITECH PROJECT, 2017
 ## 102architect
 ## File description:
-## Makrfile for 102architect
+## Makefile for 102architect
 ##
 
 SRC	=	main.c			\
 		transformations.c	\
-		display.c
+		display.c		\
+		error_management.c
 
 OBJ	=	$(SRC:.c=.o)
 

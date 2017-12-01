@@ -5,7 +5,7 @@
 ** Displays a character.
 */
 
-#include <unistd.h>
+#include "my.h"
 
 void my_putchar(char c)
 {

@@ -8,13 +8,13 @@
 
 #include "my.h"
 
-int my_rec_str_isupper(char const *str, int i)
+static int my_rec_str_isupper(char const *str, int i)
 {
 	if (str[i] == '\0')
 		return (1);
 	if (str[i] < 'A' || str[i] > 'Z')
 		return (0);
-	my_rec_str_isupper(str, i + 1);
+	return (my_rec_str_isupper(str, i + 1));
 }
 
 int my_str_isupper(char const *str)

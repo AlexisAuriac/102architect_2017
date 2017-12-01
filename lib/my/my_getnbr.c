@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-char my_add_digit(int *n, char const *str, int i)
+static char my_add_digit(int *n, char const *str, int i)
 {
 	if (*n < 0 || str[i - 1] == '-') {
 		*n = *n * 10 - str[i] + '0';

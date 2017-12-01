@@ -11,6 +11,7 @@
 #include <math.h>
 #include "include/macro.h"
 #include "include/struct.h"
+#include "include/error_management.h"
 #include "include/transformations.h"
 #include "include/display.h"
 
@@ -58,6 +59,8 @@ int main(int ac, char **av)
 	vector_t pos_image = {0};
 	double matx[3][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
 
+	if (test_argv(ac, av) == 84)
+		return (84);
 	pos_init.x = atof(av[1]);
 	pos_init.y = atof(av[2]);
 	get_transf(pos_init, matx, av);

@@ -10,7 +10,7 @@
 
 void my_sort_int_array(int *array, int size)
 {
-	int mem;
+	int mem = 0;
 
 	for (int i = 0 ; i < size - 1 ; i++) {
 		if (array[i] > array[i + 1]) {

@@ -7,7 +7,7 @@
 
 #include "my.h"
 
-int my_comparestr(char const *str, char const *to_find, int start)
+static int my_comparestr(char const *str, char const *to_find, int start)
 {
 	for (int i = start ; to_find[i - start] != '\0' ; i++) {
 		if (str[i] != to_find[i - start])
@@ -16,9 +16,9 @@ int my_comparestr(char const *str, char const *to_find, int start)
 	return (1);
 }
 
-char *my_strpartcpy(char *dest, char const *str, int start)
+static char *my_strpartcpy(char *dest, char const *str, int start)
 {
-	int i;
+	int i = 0;
 
 	for (i = start ; dest[i - start] != '\0' ; i++)
 		dest[i - start] = str[i];
@@ -28,9 +28,9 @@ char *my_strpartcpy(char *dest, char const *str, int start)
 
 char *my_strstr(char const *str, char const *to_find)
 {
-	int i;
+	int i = 0;
 	char found = 'F';
-	char *found_str;
+	char *found_str = NULL;
 
 	for (i = 0 ; str[i] != '\0' && found == 'F' ; i++) {
 		if (my_comparestr(str, to_find, i) == 1)

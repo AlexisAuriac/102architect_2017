@@ -9,7 +9,7 @@
 
 #include "my.h"
 
-int my_print_unprintable(int c)
+static int my_print_unprintable(int c)
 {
 	char result[50];
 	char base[] = "0123456789abcdef";

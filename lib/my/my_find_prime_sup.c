@@ -16,4 +16,5 @@ int my_find_prime_sup(int nb)
 		if (my_is_prime(i) == 1)
 			return (i);
 	}
+	return (0);
 }

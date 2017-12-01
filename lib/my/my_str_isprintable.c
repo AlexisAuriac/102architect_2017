@@ -14,7 +14,7 @@ int my_rec_str_isprintable(char const *str, int i)
 		return (1);
 	if (str[i] < ' ')
 		return (0);
-	my_rec_str_isprintable(str, i + 1);
+	return (my_rec_str_isprintable(str, i + 1));
 }
 
 int my_str_isprintable(char const *str)
