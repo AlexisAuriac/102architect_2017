@@ -15,7 +15,6 @@ all	:	$(LIB)
 
 $(LIB)	:	$(OBJ)
 		ar rc $(LIB) $(OBJ)
-		cp $(LIB) ../graph
 		cp my.h ../../include/
 
 clean	:
