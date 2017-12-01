@@ -5,7 +5,6 @@
 ** Tests the arguments to make sure they are valid.
 */
 
-#include <stdlib.h>
 #include "include/my.h"
 
 static int test_one(char **av, int *i)
@@ -28,7 +27,7 @@ int test_argv(int ac, char **av)
 {
 	int (*test)(char **, int *) = NULL;
 
-	if (ac < 3)
+	if (ac < 4)
 		return (84);
 	if (!my_str_isnum(av[1]) || !my_str_isnum(av[2]))
 		return (84);

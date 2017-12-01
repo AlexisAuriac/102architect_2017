@@ -6,10 +6,6 @@
 */
 
 #include <stdlib.h>
-#include <unistd.h>
-#include <stdio.h>
-#include <math.h>
-#include "include/macro.h"
 #include "include/struct.h"
 #include "include/error_management.h"
 #include "include/transformations.h"

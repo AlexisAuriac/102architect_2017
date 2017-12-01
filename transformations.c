@@ -74,7 +74,7 @@ void symmetry(double matx[3][3], double angle)
 	matx_sym[1][0] = sin(2 * angle);
 	matx_sym[1][1] = -cos(2 * angle);
 	multiplie_matx(matx, matx_sym);
-	angle =	ABS_ZERO(angle);
+	angle = ABS_ZERO(angle);
 	printf("Symmetry about an axis inclined with an angle of ");
 	printf("%.f degrees\n", DEGREE(angle));
 }
