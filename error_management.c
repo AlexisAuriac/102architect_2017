@@ -18,7 +18,7 @@ static int test_one(char **av, int *i)
 static int test_two(char **av, int *i)
 {
 	*i += 2;
-	if (!my_str_isnum(av[*i]) || !my_str_isnum(av[*i]))
+	if (!my_str_isnum(av[*i]) || !my_str_isnum(av[*i - 1]))
 		return (0);
 	return (1);
 }
